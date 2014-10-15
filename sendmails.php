@@ -56,7 +56,7 @@ while ($arUser = $dbUser->Fetch()){
      * чтобы привязать к почтовым шаблонам в адмиинке, для большей автономности скрипта буду использовать mail
      */
     if ($delayProductList)
-    //mail($arUser["EMAIL"], "Отложенные товары","Добрый день, ".$arUser['LAST_NAME']." ".$arUser['NAME']." В вашем вишлисте хранятся товары ".$delayProductList.".");
+    mail($arUser["EMAIL"], "Отложенные товары","Добрый день, ".$arUser['LAST_NAME']." ".$arUser['NAME']." В вашем вишлисте хранятся товары ".$delayProductList.".");
     //file_put_contents($root.'/adduser_log.txt', var_export("4", true), FILE_APPEND);
-    file_put_contents($root.'/adduser_log.txt', var_export($arUser["EMAIL"]." Добрый день, ".$arUser['LAST_NAME']." ".$arUser['NAME']." В вашем вишлисте хранятся товары ".$delayProductList.".\n", true), FILE_APPEND);
+    //file_put_contents($root.'/adduser_log.txt', var_export($arUser["EMAIL"]." Добрый день, ".$arUser['LAST_NAME']." ".$arUser['NAME']." В вашем вишлисте хранятся товары ".$delayProductList.".\n", true), FILE_APPEND);
 }
